@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Landing Page Modern",
+        "description": "Landing page dengan desain clean, animasi halus, dan layout responsif untuk meningkatkan brand identity.",
+        "image": "assets/images/project1.png",
+        "link": "https://example.com/project1",
+        "tags": ["Frontend", "UI/UX"]
+    },
+    {
+        "title": "Todo List App",
+        "description": "Aplikasi To-Do List berbasis JavaScript dengan fitur drag & drop serta localStorage untuk penyimpanan data.",
+        "image": "assets/images/project2.png",
+        "link": "https://example.com/project2",
+        "tags": ["JavaScript", "Productivity"]
+    },
+    {
+        "title": "Company Profile Website",
+        "description": "Website profile perusahaan professional dengan tampilan elegan, interaktif, dan responsif.",
+        "image": "assets/images/project3.png",
+        "link": "https://example.com/project3",
+        "tags": ["Company Profile", "Frontend"]
+    },
+    {
+        "title": "Portfolio Website",
+        "description": "Website portofolio modern dengan animasi scroll reveal, smooth scroll, dan dark mode opsional.",
+        "image": "assets/images/project4.png",
+        "link": "https://example.com/project4",
+        "tags": ["Portfolio", "UI/UX"]
+    },
+    {
+        "title": "Admin Dashboard UI",
+        "description": "Dashboard UI dengan chart, statistik, dan komponen modern untuk monitoring data secara real-time.",
+        "image": "assets/images/project5.png",
+        "link": "https://example.com/project5",
+        "tags": ["Dashboard", "JavaScript"]
+    },
+    {
+        "title": "Mini E-Commerce App",
+        "description": "Aplikasi e-commerce sederhana dengan fitur cart, quantity control, dan UI minimalis.",
+        "image": "assets/images/project6.png",
+        "link": "https://example.com/project6",
+        "tags": ["E-Commerce", "Frontend"]
+    }
+]

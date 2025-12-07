@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Home</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER COMPONENT ================= -->
+    <div id="header"></div>
+    <script>
+        fetch("components/header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero">
+        <div class="hero-text fade-up">
+            <h2>Hello, I'm <span>Nama Kamu</span></h2>
+            <p>
+                I'm a <strong><span class="typing"></span></strong>  
+                passionate about building modern digital experiences.
+            </p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+
+        <div class="hero-img fade-left">
+            <img src="assets/images/profile.jpg" alt="Profile Photo">
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-container fade-up">
+            <div class="about-img">
+                <img src="assets/images/profile.jpg" alt="Profile">
+            </div>
+
+            <div class="about-info">
+                <p>
+                    Saya adalah seorang Web Developer yang fokus membuat website modern,
+                    cepat, responsif, dan mudah digunakan.
+                </p>
+                <p>
+                    Berpengalaman dalam HTML, CSS, JavaScript, serta framework modern seperti React.
+                </p>
+
+                <h3>Skills</h3>
+                <div class="skills">
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">React</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <p class="project-intro fade-up">
+            Semua project di bawah ini dimuat secara otomatis dari <strong>projects.json</strong>.
+        </p>
+
+        <div class="project-container fade-up">
+            <!-- PROJECT CARDS WILL LOAD AUTOMATICALLY -->
+        </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-container fade-up">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER COMPONENT ================= -->
+    <div id="footer"></div>
+    <script>
+        fetch("components/footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+    <!-- ================= JS ================= -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
+
+    <!-- ================= LOAD PROJECTS FROM JSON ================= -->
+    <script>
+        fetch("data/projects.json")
+        .then(res => res.json())
+        .then(projects => {
+            const container = document.querySelector(".project-container");
+
+            projects.forEach(project => {
+                container.innerHTML += `
+                    <div class="project-card fade-up">
+                        <img src="${project.image}" alt="${project.title}">
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <a href="${project.link}" target="_blank" class="btn">View Project</a>
+                    </div>
+                `;
+            });
+        });
+    </script>
+
+</body>
+</html>

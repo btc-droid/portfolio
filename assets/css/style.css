@@ -1,0 +1,362 @@
+/* =====================================================
+   GLOBAL STYLE
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f6f6f6;
+    color: #333;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #111;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+
+/* =====================================================
+   HEADER / NAVBAR
+===================================================== */
+.header {
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu li a {
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: #007bff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+.hero {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero-text h2 span {
+    color: #007bff;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.hero-img img {
+    width: 350px;
+    border-radius: 20px;
+}
+
+
+/* =====================================================
+   ABOUT PAGE
+===================================================== */
+.about-page, .about {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-info h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.skills {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-card {
+    padding: 8px 15px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    font-weight: 500;
+    cursor: default;
+}
+
+
+/* Hover Glow Effect */
+.hover-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-glow::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.hover-glow:hover::before {
+    width: 180px;
+    height: 180px;
+}
+
+
+/* =====================================================
+   PROJECTS PAGE
+===================================================== */
+.projects,
+.projects-page {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.project-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card h3 {
+    margin: 12px 0;
+}
+
+
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+.contact-page {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-details p {
+    margin: 8px 0;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+
+/* =====================================================
+   SCROLL REVEAL ANIMATION
+===================================================== */
+.fade-up, .fade-left, .fade-right, .zoom-in {
+    opacity: 0;
+    transition: 0.7s ease-out;
+}
+
+.fade-up { transform: translateY(25px); }
+.fade-left { transform: translateX(-30px); }
+.fade-right { transform: translateX(30px); }
+.zoom-in { transform: scale(0.8); }
+
+.fade-up.show,
+.fade-left.show,
+.fade-right.show,
+.zoom-in.show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+
+/* =====================================================
+   RESPONSIVE MEDIA QUERIES
+===================================================== */
+@media (max-width: 780px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 260px;
+    }
+
+    .about-container,
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}

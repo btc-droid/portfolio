@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== HEADER AUTO LOAD ========== -->
+    <div id="header"></div>
+    <script>
+        fetch("components/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+
+    <!-- ========== ABOUT PAGE CONTENT ========== -->
+    <section class="about-page">
+        <h2 class="section-title fade-up">About Me</h2>
+
+        <div class="about-container fade-up">
+
+            <!-- Profile Image -->
+            <div class="about-img fade-left">
+                <img src="assets/images/profile.jpg" alt="Profile Photo">
+            </div>
+
+            <!-- Info Section -->
+            <div class="about-info fade-right">
+                <p>
+                    Halo! Saya <strong>Nama Kamu</strong>, seorang Web Developer yang
+                    berfokus pada pembuatan website modern, responsif, cepat, dan user-friendly.
+                    Saya tertarik pada dunia desain dan teknologi, serta senang membuat
+                    pengalaman digital yang maksimal dan estetis.
+                </p>
+
+                <p>
+                    Saya berpengalaman dalam HTML, CSS, JavaScript, dan teknologi modern
+                    seperti React. Selain itu, saya terbiasa membuat UI/UX sederhana,
+                    memproses data dasar, dan mengembangkan fitur interaktif menggunakan JavaScript.
+                </p>
+
+                <h3>My Skills</h3>
+                <div class="skills about-skills">
+                    <div class="skill-card hover-glow">HTML</div>
+                    <div class="skill-card hover-glow">CSS</div>
+                    <div class="skill-card hover-glow">JavaScript</div>
+                    <div class="skill-card hover-glow">React</div>
+                    <div class="skill-card hover-glow">UI/UX</div>
+                    <div class="skill-card hover-glow">Node.js</div>
+                </div>
+
+                <a href="projects.html" class="btn">View My Projects</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== FOOTER AUTO LOAD ========== -->
+    <div id="footer"></div>
+    <script>
+        fetch("components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+    <!-- ========== JS ========== -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
+
+</body>
+</html>

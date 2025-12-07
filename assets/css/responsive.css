@@ -1,0 +1,163 @@
+/* =====================================================
+   RESPONSIVE CSS — FINAL PRODUCTION VERSION
+   Untuk mengoptimalkan tampilan Tablet & Mobile
+===================================================== */
+
+
+/* =====================================================
+   📱 TABLET (max-width: 992px)
+===================================================== */
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .hero-img img {
+        width: 280px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   📱 MOBILE STANDARD (max-width: 768px)
+===================================================== */
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 12px;
+        width: 220px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 240px;
+    }
+
+    /* ABOUT */
+    .about-img img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    /* PROJECTS */
+    .project-container {
+        gap: 20px;
+    }
+
+    /* CONTACT */
+    .contact-page {
+        margin-top: 60px;
+    }
+}
+
+
+/* =====================================================
+   📱 MOBILE SMALL (max-width: 480px)
+===================================================== */
+@media (max-width: 480px) {
+
+    /* HEADER */
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    /* HERO */
+    .hero-text h2 {
+        font-size: 26px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-img img {
+        width: 200px;
+    }
+
+    /* SECTION TITLES */
+    .section-title {
+        font-size: 26px;
+    }
+
+    /* PROJECT CARDS */
+    .project-card {
+        padding: 12px;
+    }
+
+    /* CONTACT */
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 15px;
+    }
+
+    /* BUTTON */
+    .btn {
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+}
